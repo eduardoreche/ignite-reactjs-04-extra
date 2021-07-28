@@ -17,7 +17,7 @@ export function Banner() {
       bgRepeat="no-repeat">
       <Flex justifyContent="space-around" align="start">
         <Stack pt="24" w="30%" gap="4" justify="start" align="start">
-          <Text fontSize="4xl" color="white">
+          <Text as="h1" fontSize="3xl" color="white">
             5 Continentes,
             <br />
             infinitas possibilidades.
