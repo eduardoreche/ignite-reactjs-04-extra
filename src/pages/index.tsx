@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import { Flex, Stack } from '@chakra-ui/react';
+import { Text, Image, Flex, Stack, Box } from '@chakra-ui/react';
 
 import { Header } from '../components/Header';
 import { Banner } from '../components/Banner';
+import { Categories } from '../components/Categories';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Stack maxWidth={1440} mx="auto" w="100%" h="100vh">
         <Header />
         <Banner />
+        <Categories />
       </Stack>
     </>
   );
