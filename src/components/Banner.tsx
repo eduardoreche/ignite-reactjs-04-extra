@@ -8,28 +8,38 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
-export function Banner() {
+interface BannerProps {
+  title: string;
+  description?: string;
+  backgroundImage: string;
+  secondaryImage?: string;
+}
+
+export function Banner({
+  title,
+  description,
+  backgroundImage,
+  secondaryImage,
+}: BannerProps) {
   return (
     <Box
       w="100%"
-      bgImage="/images/banner-background.png"
+      bgImage={backgroundImage}
       bgPosition="start"
-      bgRepeat="no-repeat">
-      <Flex justifyContent="space-around" align="start">
-        <Stack pt="24" w="30%" gap="4" justify="start" align="start">
-          <Text as="h1" fontSize="3xl" color="white">
-            5 Continentes,
-            <br />
-            infinitas possibilidades.
-          </Text>
+      bgRepeat="no-repeat"
+      height="500px">
+      <Flex justifyContent="space-around" align="start" alignItems="center">
+        <Stack pt="8" w="30%" gap="4" justify="start" align="start">
+          <Heading fontSize="4xl" color="white">
+            {title}
+          </Heading>
           <Text color="white" fontSize="lg">
-            Chegou a hora de tirar do papoel a viagem que você sempre sonhou.
-            adfasfas
+            {description}
           </Text>
         </Stack>
 
         <Box mt="20">
-          <Image src="/images/airplane.png" alt="Airplane" />
+          {secondaryImage && <Image src={secondaryImage} alt="world-trip" />}
         </Box>
       </Flex>
     </Box>

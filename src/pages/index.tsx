@@ -14,7 +14,12 @@ export default function Home() {
       </Head>
       <Stack maxWidth={1440} mx="auto" w="100%" h="100vh">
         <Header />
-        <Banner />
+        <Banner
+          title="5 Continentes, infinitas possibilidades"
+          description="Chegou a hora de tirar do papel a viaggem qeu você sempre sonhou."
+          backgroundImage="/images/banner-background.png"
+          secondaryImage="/images/airplane.png"
+        />
         <Categories />
         <Box p="10" align="center" justify="center">
           <Image src="/images/divider.png" alt="divider" />
